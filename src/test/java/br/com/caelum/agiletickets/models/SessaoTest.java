@@ -5,6 +5,8 @@ import org.junit.Test;
 
 public class SessaoTest {
 
+	
+	
 
 	@Test
 	public void deveVender1ingressoSeHa2vagas() throws Exception {
@@ -15,11 +17,19 @@ public class SessaoTest {
 	}
 	
 	@Test
-	public void deveVender21ingressoSeHa2vagas() throws Exception {
+	public void deveVender2ingressoSeHa2vagas() throws Exception {
 		Sessao sessao = new Sessao();
         sessao.setTotalIngressos(2);
 
         Assert.assertTrue(sessao.podeReservar(2));
+	}
+	
+	@Test
+	public void deveVenderMaxingressoSeHaMaxvagas() throws Exception {
+		Sessao sessao = new Sessao();
+        sessao.setTotalIngressos(Integer.MAX_VALUE);
+
+        Assert.assertTrue(sessao.podeReservar(Integer.MAX_VALUE));
 	}
 
 	@Test
