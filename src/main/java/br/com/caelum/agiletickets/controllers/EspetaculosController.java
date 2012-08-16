@@ -20,8 +20,6 @@ import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.Validator;
 import br.com.caelum.vraptor.validator.ValidationMessage;
 
-import com.google.common.base.Strings;
-
 @Resource
 public class EspetaculosController {
 
